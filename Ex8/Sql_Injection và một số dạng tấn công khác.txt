@@ -1,0 +1,80 @@
+- Một số dạng tấn công cơ bản:
+	+Sql injection:	
+	+XSS
+	+CSRF
+
+* Sql Injection: là một kỹ thuật lợi dụng những lỗ hổng bảo mật về câu truy vấn lấy dữ liệu của những website, đây là một kỹ thuật tấn công phổ biến và khả năng thành công khá cao.
+	1. Những ảnh hưởng của lỗ hổng này:
+	+ Có thể bị lấy cắp một phần hoặc toàn bộ dữ liệu trong hệ thống.
+	+ Dữ liệu có thể bị chỉnh sửa hoặc xóa bỏ gây sự hoạt động ko trơn tru hoặc dừng hoàn toàn ứng dụng 
+	+ Lộ mật khẩu của khách hàng nếu hệ thống này có hỗ trợ đăng nhập
+	2. Cơ chế của injection
+	+ chúng ta thường viết các câu lệnh truy vấn đơn giản bẳng cách cộng các chuỗi thành câu truy vấn rồi thực thi 	dẫn đến hacker có thể lợi dụng sơ hở này 
+
+	+ ví dụ phần đăng nhập bài ex8_Sql_Injection: 
+		với chức năng đăng nhập query để kiểm tra user là 
+       	 String query = "select * from user where username='"+username+"' and password = '"+password+"'";
+	
+	khi ta nhập username=' or ''=', password=' or ''='';-- khi đó câu lệnh sql được thực thi sẽ là: 
+	select * from user where username='' or ''='' and password='' or ''=''; --'
+	những phần sau dấu -- sẽ trở thành comment và câu lệnh trên sẽ lấy tất cả các user có trong bảng và thế là ta có 	thể đăng nhập vào mà không cần biết tài khoản mật khẩu.
+
+	3. Cách phòng chống:
+	+ như ví dụ ở trên ta có thể thay đổi như sau để tránh bị tấn công:
+
+	 String query = "select * from user where username=:username and password =:password";
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+ 		paramSource.addValue("username", username);
+	 	paramSource.addValue("password", password);
+
+ 		jdbcTemplate.queryForRowSet(query,paramSource);
+	
+	+ hạn chế sử dụng SQL thuần để truy vấn thay vào đó hãy sử dụng các framework có kiến trúc ORM, các framework này thường tự tạo query và kiến hacker khó tấn công hơn,
+	+ nếu cần sử dụng query thuần thì ta nên sử dụng parameter thay vì cộng chuỗi như trên
+	+không hiển thị chi tiết lỗi mà chỉ hiển thị thông báo lỗi cơ bản
+	+ Phần quyền rõ ràng cho database ko nên sử dụng các tài khoản phân quyền root 
+	+ Backup dữ liệu thường xuyên 
+
+* Để hiểu hơn về 2 CSRF ta tìm hiểu Cookie và Session
+	- Cookie: Cookie là một đoạn văn bản ghi thông tin được tạo ra và lưu trên trình duyệt của máy người dùng. 	Cookie thường được tạo ra khi người dùng truy cập một website, cookie sẽ ghi nhớ những thông tin như tên đăng 	nhập, mật khẩu, các tuỳ chọn do người dùng lựa chọn đi kèm. Các thông tin này được lưu trong máy tính để nhận 	biết người dùng khi truy cập vào một trang web.
+	- Sesion: Session là một khái niệm phổ biến được dùng trong lập trình các website có kết nối với cơ sở dữ liệu 	database. Đặc biệt các chức năng như đăng nhập, đăng xuất người dùng sẽ khó có thể thực hiện được nếu không 	sử dụng session.
+
+	- Khác nhau giữa Cookie và Session là:
+	 	+ Cookie được tạo và lưu trữ ở máy khách dễ dàng sửa đổi ở phía máy khách
+		+ Session được lưu trữ ở phía máy chủ và khi mỗi một máy khách truy cập đến sẽ tạo ra một Session 			ở máy chủ và máy chủ sẽ gửi 1 ID đại diện cho Session đó cho máy khách máy khách thường sẽ lưu 		trữ ID này trên Cookie
+
+
+Session đơn giản là 1 cách để chúng ta lưu lại dữ liệu của người dùng sử dụng website. Giá trị của session được lưu trong một tập tin trên máy chủ. Ví dụ khi bạn đăng nhập vào một trang web và đăng nhập với tài khoản đã đăng ký trước đó. Máy chủ sau khi xác thực được thông tin bạn cung cấp là đúng nó sẽ sinh ra một tập tin (hay chính là session của trình duyệt của bạn) chứa dữ liệu cần lưu trữ của người dùng. 
+
+* XSS: Cross Site Scripting (XSS) là một trong những tấn công phổ biến và dễ bị tấn công nhất mà tất cả các Tester có kinh nghiệm đều biết đến. Nó được coi là một trong những tấn công nguy hiểm nhất đối với các ứng dụng web và có thể mang lại những hậu quả nghiêm trọng. Giới thiệu về tấn công XSS Tấn công XSS là một đoạn mã độc, để khái thác một lỗ hổng XSS, hacker sẽ chèn mã độc thông qua các đoạn script để thực thi chúng ở phía Client. Thông thường, các cuộc tấn công XSS được sử dụng để vượt qua truy cập và mạo danh người dùng.Mục đích chính của cuộc tấn công này là ăn cắp dữ liệu nhận dạng của người dùng như: cookies, session tokens và các thông tin khác. Trong hầu hết các trường hợp, cuộc tấn công này đang được sử dụng để ăn cắp cookie của người khác. Như chúng ta biết, cookie giúp chúng tôi đăng nhập tự động. Do đó với cookie bị đánh cắp, chúng tôi có thể đăng nhập bằng các thông tin nhận dạng khác. Và đây là một trong những lý do, tại sao cuộc tấn công này được coi là một trong những cuộc tấn công nguy hiểm nhất
+	1. Cách thức tấn công
+	Tấn công Cross Site Scripting nghĩa là gửi và chèn lệnh và script độc hại, những mã độc này thường được viết với 	ngôn ngữ lập trình phía client như Javascript, HTML, VBScript, Flash… Tuy nhiên, cách tấn công này thông 	thường sử dụng Javascript và HTML. Cách tấn công này có thể được thực hiện theo nhiều cách khác nhau, phụ 	thuộc vào loại tấn công XSS, những mã độc có thể được phản chiếu trên trình duyệt của nạn nhân hoặc được lưu 	trữ trong cơ sở dữ liệu và được chạy mỗi khi người dùng gọi chức năng thích hợp. Nguyên nhân chính của loại 	tấn công này là xác thực đầu vào dữ liệu người dùng không phù hợp, dữ liệu độc hại từ đầu vào có thể xâm nhập 	vào dữ liệu đầu ra. Mã độc có thể nhập một script và được chèn vào mã nguồn của website. Khi đó trình duyệt 	không thể biết mã thực thi có phải độc hại hay không. Do đó mã độc hại có thể đang được thực thi trên trình 	duyệt của nạn nhận hoặc bất kỳ hình thức giả nào đang được hiển thị cho người sử dụng. Có một số hình thức tấn 	công XSS có thể xảy ra. Bên dưới là những hình thức tấn công chính của Cross Site Scripting:
+
+	- Cross Site Scripting có thể xảy ra trên tập lệnh độc hại được thực hiện ở phía client.
+	- Trang web hoặc form giả mạo được hiển thị cho người dùng (nơi nạn nhân nhập thông tin đăng nhập hoặc nhấp 		vào liên kết độc hại).
+	- Trên các trang web có quảng cáo được hiển thị.
+	- Email độc hại được gửi đến nạn nhân. Tấn công xảy ra khi tin tặc tìm kiếm những lỗ hổng trên website và gửi nó 		làm đầu vào độc hại. Tập lệnh độc hại được tiêm vào mã lệnh và sau đó được gửi dưới dạng đầu ra cho người 		dùng cuối cùng.
+	2. Cách để phòng chống 
+	- 
+
+* CSRF: CSRF hay còn gọi là kỹ thuật tấn công “Cross-site Request Forgery“, nghĩa là kỹ thuật tấn công giả mạo chính chủ thể của nó. CSRF nói đến việc tấn công vào chứng thực request trên web thông qua việc sử dụng Cookies. Đây là nơi mà các hacker có khả năng sử dụng thủ thuật để tạo request mà bạn không hề biết. Vì vậy, một CSRF là hacker lạm dụng sự tin tưởng của một ứng dụng web trên trình duyệt của nạn nhân.	
+	1. Cách thức tấn công:
+	CSRF là một kiểu tấn công gây sự nhầm lẫn tăng tính xác thực và cấp quyền của nạn nhân khi gửi một request giả 	mạo đến máy chủ. Vì thế một lỗ hổng CSRF ảnh hưởng đến các quyền của người dùng ví dụ như quản trị viên, 		kết quả là chúng truy cập được đầy đủ quyền.
+	Khi gửi một request HTTP, trình duyệt của nạn nhân sẽ nhận về Cookie. Các cookie thường được dùng để lưu trữ 	một session (Đọc thêm bài Session là gì? để hiểu thêm cách hoạt động của Session và cookies) để định danh 		người dùng không phải xác thực lại cho mỗi yêu cầu gửi lên.
+
+	Nếu phiên làm việc đã xác thực của nạn nhân được lưu trữ trong một Cookie vẫn còn hiệu lực, và nếu ứng dụng 		không bảo mật dễ bị tấn công CSRF. Kẻ tấn công có thể thử dụng CSRF để chạy bất cứ requets nào với ứng 		dụng web mà ngay cả trang web không thể phân biệt được request nào là thực hay giả mạo.
+
+	Ví dụ để hiểu rõ hơn, khi ứng dụng web có một chức năng đơn giản đó là thay đổi mật khẩu người dùng. Việc gửi 		lên server theo phương thức HTTP GET thông thường. Nội dung gửi lên là password mới và confirm lại password 	vừa nhập:
+
+	Người dùng đã đăng nhập trên web của bạn, cookie sẽ được tạo và lưu trữ dưới trình duyệt, khi bạn vào site lần 		sau bạn không cần phải đăng nhập lại. Giả sử bạn chưa đăng thoát, lúc này cookies của bạn vẫn còn hạn trong 		phiên làm việc.Lúc này nếu website của bạn mắc lỗi CSRF, người dùng vô tình vào một trang hacker giả mạo với 		mục đích lấy tài khoản từ ứng dụng web của bạn. Trong trang giả mạo hacker sẽ dùng script để chạy một url để 		cố ý reset mật khẩu người dùng trên trang của bạn
+
+	2.Cách phòng chống
+	- Phía người dùng:
+	+ Nên đăng xuất khỏi các website quan trọng: Tài khoản ngân hàng, thanh toán trực tuyến, các mạng xã hội, 		gmail… khi đã thực hiện xong giao dịch.
+	+ Nên login vào một máy riêng và không cho người thứ 2 tiếp xúc với máy đó.
+	+ Không nên click vào các đường dẫn mà bạn nhận được qua email, qua facebook … Khi bạn đưa chuột qua 1 		đường dẫn, phía dưới bên trái của trình duyệt thường có địa chỉ website đích, bạn nên lưu ý để đến đúng trang 		mình muốn.
+	+ Không lưu các thông tin về mật khẩu tại trình duyệt của mình. Không nên chọn các phương thức “đăng nhập 		lần sau”, “lưu mật khẩu” …
+	+ Trong quá trình thực hiện giao dịch hay vào các website quan trọng không nên vào các website khác, có thể 		chứa các mã khai thác của kẻ tấn công.
+	- Phía sever:
+	+ sử dụng captcha , hoặc otp  khi xác nhận thay đổi mật khẩu hoặc thực hiện một số chức năng quan trọng 
+	+Kiểm tra IP: Một số hệ thống quan trọng chỉ cho truy cập từ những IP được thiết lập sẵn, hoặc chỉ cấp phép 		truy cập quản trị qua IP local hoặc VPN.

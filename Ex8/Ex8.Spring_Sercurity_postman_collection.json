@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "d1e31d55-b699-41f3-9d85-fd2d2eb6874a",
+		"name": "Ex8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "getPageProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/products?name=&page=1&size=2",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJza3libGFjazEiLCJleHAiOjE2NTgyMjc5MTEsImlhdCI6MTY1ODIwOTkxMX0.luL5bzotvrFRqieqaargfMqJHzf4lhkNUE2AGU9dtoZrdgMS7LDckJMk2zb60yds2kFi2k8Uu1QndYLZfP06sA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base}}/product/:Id",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"product",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"maDanhMuc\": 2,\r\n        \"maKho\": 3,\r\n        \"ten\": \"Điện thoại Sony Xperia XZ14s\",\r\n        \"moTa\": \"ok dung duoc\",\r\n        \"image\": \"none\",\r\n        \"soLuongSp\": 300,\r\n        \"soLuongBan\": 0,\r\n        \"donGia\": 20000000\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/product",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n       \r\n        \"maDanhMuc\": 3,\r\n        \"maKho\": 2,\r\n        \"ten\": \"Điện thoại Sony Xperia mới sửa\",\r\n        \"moTa\": \"màn hình 4k\",\r\n        \"image\": \"hello\",\r\n        \"soLuongSp\": 300,\r\n        \"soLuongBan\": 0,\r\n        \"donGia\": 20000000\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/product/:Id",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"product",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {        \r\n        \"ten\": null,\r\n        \"moTa\": \"test\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/category",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": null,\r\n        \"ten\": \"Apple\",\r\n        \"moTa\": \"Made in USE, tạm ổn đã sửa lầm 2\",\r\n        \"ngayTao\": \"2022-07-12T17:00:00.000+00:00\",\r\n        \"ngaySua\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/category/:Id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/category/:id",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPageCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/categories",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stored",
+			"item": [
+				{
+					"name": "addStore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {        \r\n        \"ten\": \"test\",\r\n        \"moTa\": \"test\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStore",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n       \"ten\": \"kho so 5\",\r\n        \"diaDiem\": \"Ninh Binh\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/store/:Id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"store",
+								":Id"
+							],
+							"variable": [
+								{
+									"key": "Id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPageStore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/stores?name=kho&page=0&size=1",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"stores"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "kho"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteStore",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/storage/:id",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"storage",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"skyblack\",\r\n    \"passwork\" : \"anktkjen\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base}}/login",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "localhost:8080",
+			"type": "default"
+		}
+	]
+}

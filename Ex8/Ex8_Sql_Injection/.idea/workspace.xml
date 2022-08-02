@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e749a57-3834-4f12-81a0-b5fda71b2619" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/dto/request/CategoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/dto/respond/AccountRespond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/dto/respond/CategoryRespond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/dto/respond/ProductRespond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/dto/respond/StorageRespond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_6_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex4/Ex4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ex4/Ex4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex4/ex-4-spring-boot-basic/src/main/java/com/sapo/edu/demo/controller/BidvAtm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ex4/ex-4-spring-boot-basic/src/main/java/com/sapo/edu/demo/service/Impl/BidvAtm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex4/ex-4-spring-boot-basic/src/main/java/com/sapo/edu/demo/view/PrinterConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ex4/ex-4-spring-boot-basic/src/main/java/com/sapo/edu/demo/service/Impl/PrinterConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ex4/ex-4-spring-boot-basic/src/main/java/com/sapo/edu/demo/view/PrinterFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ex4/ex-4-spring-boot-basic/src/main/java/com/sapo/edu/demo/service/Impl/PrinterFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/login/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/dto/request/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/login/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/model/dto/respond/LoginRespond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/security/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/StorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ex8_Spring_Sercurity/src/main/java/com/sapo/ex8_spring_security/sevice/impl/StorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/252d1d562af11afa7625e26d72d74b8707895066" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/658a031c2e286caa51dfba2458cd9aeec940bb6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68c8a3480c80a3149a681fb233f1b9fe2de0b76d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/724777684d347ff78147ec914971b4be58e890c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a39ebd8607ccb33192f387b128134e33f52bfcf7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bfa8239558627f770a7dd8795d06ddf1b50c93cf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc4e5711947ddcaca0cd9025806ad6b4f7368c04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de5c189abe47edc740420c5965391c3f3e8dfa03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff83c75d06b7b438426ef6d87de858759dc8ff82" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ex05_DB_Springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ex05_DB_Springboot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ex05_db_springboot/Ex8SqlInjection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ex05_db_springboot/Ex8SqlInjection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ex05_db_springboot/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ex05_db_springboot/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ex05_db_springboot/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ex05_db_springboot/services/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ex05_db_springboot/Ex8SqlInjection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ex05_db_springboot/Ex8SqlInjection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ex05_db_springboot/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ex05_db_springboot/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ex05_db_springboot/services/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ex05_db_springboot/services/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TongHop/Một số nguyên tắc nên biết.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TongHop/Một số nguyên tắc nên biết.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BmMW1ozeOPdDxLCBVdxMjo3On0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Work/Sapo/GitRepos/thiennd/Ex8/Ex8_Sql_Injection&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;72aee7b8af979c293252d58af84989e2&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.ex05_db_springboot.services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Sapo\GitRepos\Ex05_DB_Springboot\src\main\java\com\example\ex05_db_springboot\controller\v2" />
+      <recent name="D:\Work\Sapo\GitRepos\Ex05_DB_Springboot\src\main\java\com\example\ex05_db_springboot\model\mapper\v2" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Ex8SqlInjection" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="Ex05_DB_Springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ex05_db_springboot.Ex8SqlInjection" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e749a57-3834-4f12-81a0-b5fda71b2619" name="Changes" comment="" />
+      <created>1657506834330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657506834330</updated>
+      <workItem from="1657506839525" duration="2804000" />
+      <workItem from="1657591008289" duration="30871000" />
+      <workItem from="1657626610900" duration="15224000" />
+      <workItem from="1657673710808" duration="1689000" />
+      <workItem from="1657675613601" duration="8287000" />
+      <workItem from="1657702185563" duration="64000" />
+      <workItem from="1657702909386" duration="2289000" />
+      <workItem from="1657717375125" duration="1406000" />
+      <workItem from="1657936783164" duration="8134000" />
+      <workItem from="1658106955755" duration="567000" />
+      <workItem from="1658116369320" duration="890000" />
+      <workItem from="1658117460367" duration="546000" />
+      <workItem from="1658136687131" duration="2901000" />
+      <workItem from="1658186328712" duration="608000" />
+      <workItem from="1658205638611" duration="585000" />
+      <workItem from="1658214524364" duration="1376000" />
+      <workItem from="1658312529943" duration="526000" />
+      <workItem from="1658366561522" duration="1626000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="storeCtrl" language="JAVA" />
+        <watch expression="jdbcTemplate" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

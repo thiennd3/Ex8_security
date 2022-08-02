@@ -1,0 +1,22 @@
+* JWT hay JSON Web Token: là một chuẩn tạo ra một chuỗi mã hóa chứa các dữ liệu để trao đổi thông tin giữa các hệ thống thông tin khác nhau một các an toàn.
+
+* Cấu trúc của JWT:
+	+Header: bao gồm typ xác định kiểu token ở trường hợp này là JWT, alg là thuật toán dùng để mã hóa có thể là SHA256, HS256,RSA ...
+	+Payload: chứa nội dung của thông tin được chia làm 3 loại reserved,pulic và private
+		1.Reserved: là những thồn tin được quy định trong IANA JSON Web Token Claims registry
+			Iss(Isuer): tổ chức phát hành token
+			sub(Subject): chủ đề của token
+			aud(audience): đối tượng sử dụng token
+			exp(expried time): thời điểm token hết hạn
+			nbf (not before time): trước thời điểm này token chưa hợp lệ
+			iat(Isued at): thời điểm token được phát hành, tính theo Unix time 
+			Jti: ID của JWT
+		2.Public: khóa có thể định nghĩa theo tùy ý muốn của người sử dụng
+		3.private: Phần thông tin thêm dùng để truyền qua giữa các máy thành viên
+	+Signature: phần chữ ký được tạo bằng kết hợp 2 phần Header và Payload và một từ khóa bí mật nào đó
+
+
+* JWT hoạt động như thế nào giữa máy chủ và máy khách	
+	- khi máy khách đăng nhập vào máy chủ thì máy chủ sẽ kiểm tra tài khoản mật khẩu xem có trong Database ko
+	nếu có sẽ tạo một token có chứa từ khóa bí mật đã được encode bắng MD5 hoặc Bcryt ... và gửi lại cho máy 	khách
+	- máy khách muốn thực hiện các request đến máy chủ cần phải truyên thêm cả token này thường sẽ truyền trên 	header
